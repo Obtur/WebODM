@@ -42,7 +42,7 @@ def boot():
 
         # Check super user
         if User.objects.filter(is_superuser=True).count() == 0:
-            User.objects.create_superuser('admin', 'admin@example.com', 'admin')
+            User.objects.create_superuser('admin', 'admin@example.com', 'pass1234')
             logger.info("Created superuser")
 
         # Unlock any Task that might have been locked
